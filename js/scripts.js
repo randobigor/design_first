@@ -1,8 +1,11 @@
 var audio;
 document.addEventListener("DOMContentLoaded", () => {
-    audio = new Audio();
-    audio.src = "../assets/audio.mp3"
-    audio.play();
+    if (confirm("Вы хотите слушать музыку на фоне?")) {
+        audio = new Audio();
+        audio.src = "../assets/audio.mp3"
+        audio.volume = 0;
+        audio.play();
+    }
 })
 
 function some(e) {

@@ -1,7 +1,7 @@
 var audio;
 document.addEventListener("DOMContentLoaded", () => {
     audio = new Audio();
-    audio.src = "../assets/audio.mp3"
+    audio.src = "assets/audio.mp3"
     audio.volume = 0;
 })
 

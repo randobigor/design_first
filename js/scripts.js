@@ -1,15 +1,14 @@
 var audio;
 document.addEventListener("DOMContentLoaded", () => {
-    if (confirm("Вы хотите слушать музыку на фоне?")) {
-        audio = new Audio();
-        audio.src = "../assets/audio.mp3"
-        audio.volume = 0;
-        audio.play();
-    }
+    audio = new Audio();
+    audio.src = "../assets/audio.mp3"
+    audio.volume = 0;
 })
 
 function some(e) {
+    document.querySelector("video").play();
     if (audio.volume == 0) {
+        audio.play();
         e.innerHTML = "<i class='fas fa-volume-mute'></i>"
         audio.volume = 1;
     } else {
